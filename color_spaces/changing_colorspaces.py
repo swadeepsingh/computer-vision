@@ -7,7 +7,11 @@ def load_image():
     img = cv2.imread("lena.jpg")
     return img
 
-
+# Gray image
+def covtGray(img):
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    
 # LAB colorspace
 def covtLAB(img):
     lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
@@ -27,10 +31,12 @@ def covtHSV(img):
     
 
 img = load_image()
+gray_image = covtGray(img)
 lab_img = covtLAB(img)
 ycrbc_img = covtYCrCb(img)
 hsv_img = covtHSV(img)
 cv2.imshow('original image',img)
+cv2.imshow('gray image', gray_image)
 cv2.imshow('Lab image',lab_img)
 cv2.imshow('YCrCb image',ycrbc_img)
 cv2.imshow('HSV image',hsv_img)
