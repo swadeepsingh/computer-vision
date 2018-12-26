@@ -7,6 +7,7 @@ def load_image():
     img = cv2.imread("lena.jpg")
     return img
 
+
 # Gray image
 def covtGray(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
