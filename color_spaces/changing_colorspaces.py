@@ -16,12 +16,12 @@ def covtLAB(img):
 
 # YCrCb colorspace
 def covtYCrCb(img):
-    ycrbc = cv2.cvtColor(bright, cv2.COLOR_BGR2YCrCb)
+    ycrbc = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
     return ycrcb
 
 
 # HSV colorspace
 def covtHSV(img):
-    hsv = cv2.cvtColor(bright, cv2.COLOR_BGR2HSV)
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     return hsv
     
