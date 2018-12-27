@@ -1,6 +1,16 @@
 # import package
 import cv2
 
+def covtGray(img):
+    '''
+     convert image to grayscale
+     
+     @param img: color image
+     @return gray scale converted image
+    '''
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    return gray
+
 
 def apply_binary_thresh(img, color_id=0):
     '''
@@ -17,7 +27,7 @@ def apply_binary_thresh(img, color_id=0):
         cv2.waitKey(0)
         cv2.destroyAllWindows()
     elsif (color_id==1):
-        grayscaled = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+        grayscaled = covtGray(img)
         retval, threshold = cv2.threshold(grayscaled, 10, 255, cv2.THRESH_BINARY)
         cv2.imshow('original',img)
         cv2.imshow('binary threshold (on grayscale image)',threshold)
@@ -25,17 +35,6 @@ def apply_binary_thresh(img, color_id=0):
         cv2.destroyAllWindows()    
         
 
-def covtGray(img):
-    '''
-     convert image to grayscale
-     
-     @param img: color image
-     @return gray scale converted image
-    '''
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    return gray
-    
-    
 def apply_adaptiv_gaussian_thresh(grayscaled):
     '''
      adaptive thresholding, which will attempt to vary the threshold
@@ -49,7 +48,7 @@ def apply_adaptiv_gaussian_thresh(grayscaled):
     cv2.destroyAllWindows()
     
     
-def apply_otsu_thresh():
+def apply_otsu_thresh(grayscaled):
     '''
      Otsu's threshold 
      
@@ -67,4 +66,4 @@ apply_binary_thresh(img, color_id=0)
 apply_binary_thresh(img, color_id=1)
 grayscaled = covtGray(img)
 apply_adaptiv_gaussian_thresh(grayscaled)
-apply_otsu_thresh()
+apply_otsu_thresh(grayscaled)
