@@ -24,7 +24,7 @@ def apply_binary_thresh(img, color_id=0):
         cv2.waitKey(0)
         cv2.destroyAllWindows()    
         
-# Gray colorspace
+
 def covtGray(img):
     '''
      convert image to grayscale
