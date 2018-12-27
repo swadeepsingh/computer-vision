@@ -1,3 +1,4 @@
+# import package
 import cv2
 
 # init web cam
