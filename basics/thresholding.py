@@ -14,7 +14,7 @@ def covtGray(img):
 
 def apply_binary_thresh(img, color_id=0):
     '''
-    appliy binary thresholding on color image
+    appliy binary thresholding 
     
     @param img: input color image
     @param color_id: 0 for color image thresholding and 1 for graycale image thresholding
@@ -37,7 +37,7 @@ def apply_binary_thresh(img, color_id=0):
 
 def apply_adaptiv_gaussian_thresh(grayscaled):
     '''
-     adaptive thresholding, which will attempt to vary the threshold
+     apply adaptive thresholding, which will attempt to vary the threshold
      
      @param grayscaled: grayscale image
     '''
@@ -50,7 +50,7 @@ def apply_adaptiv_gaussian_thresh(grayscaled):
     
 def apply_otsu_thresh(grayscaled):
     '''
-     Otsu's threshold 
+     apply Otsu's threshold 
      
      @param grayscaled: grayscale image
     '''
