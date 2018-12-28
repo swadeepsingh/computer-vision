@@ -11,7 +11,7 @@ ret, image = cam.read()
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # show image in seperate window
-cv2.imshow("Bild modifiziert", image)
+cv2.imshow("output", image)
 
 # wait for key press
 cv2.waitKey(0)
