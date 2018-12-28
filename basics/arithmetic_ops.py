@@ -27,6 +27,9 @@ def addition_example():
 
 
 def image_blending():
+    """
+    Image blending example
+    """    
     img1 = cv.imread('../data/udacity.jpg')
     img2 = cv.imread('../data/opencv.png')
     dst = cv.addWeighted(img1, 0.6, img2, 0.4, 0)
