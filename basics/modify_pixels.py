@@ -4,11 +4,11 @@
 import cv2
 
 # read image from HD
-image = cv2.imread("aero1.jpg")
+image = cv2.imread('../data/aero1.jpg')
 
 # read color values at position y, x
-y = 100
-x = 50
+y = 200
+x = 100
 (b, g, r) = image[y, x]
 
 # print color values to screen
@@ -21,7 +21,7 @@ image[y, x] = (0, 0, 255)
 region_of_interest = image[y:y+50, x:x+50]
 
 # show image on screen
-cv2.imshow("Bild", image)
+cv2.imshow("Original", image)
 
 # show region of interest in seperate window
 cv2.imshow("ROI", region_of_interest)
