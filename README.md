@@ -11,6 +11,6 @@ Ref: https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_set
 
 ### Setup:
 
-1. On Windows: conda install --channel https://conda.anaconda.org/menpo opencv3
+1. On Windows: conda install opencv
 
 2. Import package: import cv2
